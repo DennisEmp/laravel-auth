@@ -15,9 +15,15 @@ class ProjectFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition()
-    {
-        return [
-            //
-        ];
-    }
+{
+	return [
+
+        'name' => fake() -> words(3, true),
+        'description' => fake() -> paragraph(),
+        'main_image' => fake() -> url(),
+        'release_date' => fake() -> dateTimeBetween('-1 year'),
+        'repo_link' => fake() -> url(),
+
+	];
+}
 }

@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Controllers\MainController;
 
+Route::get('/', [MainController :: class, 'home']);
 
 Route::get('/', function () {
     return view('welcome');
